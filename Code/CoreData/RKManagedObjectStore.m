@@ -335,7 +335,7 @@ static RKManagedObjectStore *defaultObjectStore = nil;
 
     NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
                              [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
-                             [NSNumber numberWithBool:NO], NSInferMappingModelAutomaticallyOption, nil];
+                             [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
 
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
         if (self.delegate != nil && [self.delegate respondsToSelector:@selector(managedObjectStore:didFailToCreatePersistentStoreCoordinatorWithError:)]) {
